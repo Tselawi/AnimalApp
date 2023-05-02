@@ -17,7 +17,13 @@ use App\Http\Controllers\AnimalController;
 Route::get('/', function () {
     return view('welcome');
 });
-// Auth::routes(['reset' => false]);
+ Auth::routes([
+        'reset' => false,
+        'register' => false,
+        // 'login' =>false
+        'verify' => false
+]);
+
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
